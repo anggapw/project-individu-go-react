@@ -2,18 +2,7 @@ package entity
 
 import (
 	"time"
-
-	"gorm.io/gorm"
 )
-
-type User struct {
-	gorm.Model
-	FirstName string
-	LastName  string
-	Email     string
-	Password  string
-	Role      []Role `gorm:"foreignKey:UserID"`
-}
 
 type Role struct {
 	ID          int `gorm:"primaryKey"`
@@ -43,6 +32,6 @@ type Doctor struct {
 
 type Patient struct {
 	ID          int           `gorm:"primaryKey"`
-	User        []User        `gorm:"foreignKey:DoctorID"`
-	Appointment []Appointment `gorm:"foreignKey:DoctorID"`
+	User        []User        `gorm:"foreignKey:PatientID"`
+	Appointment []Appointment `gorm:"foreignKey:PatientID"`
 }
