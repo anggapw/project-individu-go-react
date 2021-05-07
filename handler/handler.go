@@ -37,3 +37,17 @@ func GetAllPatient(c *gin.Context) {
 
 	c.JSON(http.StatusOK, patients)
 }
+
+func GetAllAppointment(c *gin.Context) {
+	var appointments []entity.Appointment
+
+	if err := DB.Find(&appointments).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"status":        "error in internal server",
+			"message_error": err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, appointments)
+}

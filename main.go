@@ -11,5 +11,6 @@ func main() {
 
 	r.GET("/doctors", handler.GetAllDoctor)
 	r.GET("/patients", handler.GetAllPatient)
+	r.GET("/appointments", handler.GetAllAppointment)
 	r.Run(":4444")
 }
