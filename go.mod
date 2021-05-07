@@ -1,4 +1,4 @@
-module doctors-appointment
+module doctorsAppointment
 
 go 1.16
 
