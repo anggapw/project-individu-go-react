@@ -74,7 +74,7 @@ buatlah 1 routing khusus yang didapat dari 3rd party API ( bebas apa saja ) dan 
 3. MYSQL_PASSWORD :	A secure password for MYSQL_USER
 4. MYSQL_HOST	:	tcp or protocol deployment MYSQL
 
-- kemudian buatlah API documentation dengan menggunakan swagger (boleh membuat dokumentasi manual menggunakan API-DOC.md)
+- kemudian buatlah API documentation dengan menggunakan swagger (boleh membuat dokumentasi manual menggunakan API-DOC.md) (OPTIONAL)
 
 # project Day 5 - 7
 ## release 8
