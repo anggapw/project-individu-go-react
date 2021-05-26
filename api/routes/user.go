@@ -15,7 +15,7 @@ var (
 	userRepository          = user.NewRepository(DB)
 	userService             = user.NewService(userRepository)
 	authService             = auth.NewService()
-	userHandler             = handler.NewUserHandler(userService)
+	userHandler             = handler.NewUserHandler(userService, authService)
 )
 
 func UserRoute(r *gin.Engine) {
